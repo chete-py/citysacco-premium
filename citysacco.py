@@ -19,7 +19,7 @@ with view1:
         cannon_premium = max(value * (cannon_rate/100) * (days/365),(35000 * (days/365)))
     elif value > 2499999 and value < 5000000:
         cannon_rate = 4
-        cannon_premium = (value * (cannon_rate/100) * (days/365))
+        cannon_premium = (value * (cannon_rate/100) * (days/365),(35000 * (days/365)))
     elif value > 4999999:
         cannon_rate = 3
         cannon_premium = (value * (cannon_rate/100) * (days/365))
@@ -29,7 +29,7 @@ with view1:
         apa_premium = max(value * (apa_rate/100) * (days/365),(42500 * (days/365)))
     elif value > 2499999 and value < 5000000:
         apa_rate = 3.5
-        apa_premium= (value * (apa_rate/100) * (days/365))
+        apa_premium= (value * (apa_rate/100) * (days/365), (42500 * (days/365)))
     elif value > 4999999:
         apa_rate = 3
         apa_premium= (value * (apa_rate/100) * (days/365))  
