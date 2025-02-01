@@ -64,11 +64,10 @@ with view1:
             car_hire_two += 0
         elif loss_of_use == 'Inclusive':
             car_hire_nil += 0
-            car_hire += 1500
             car_hire_two += 3000       
                         
         cannon_gross_premium = (cannon_premium + car_hire_two)
-        icea_gross_premium = (icea_premium + car_hire_nil)        
+        icea_gross_premium = (icea_premium + car_hire_two)        
         apa_gross_premium = ( apa_premium + car_hire_two)
         
         cannon_levies = cannon_gross_premium * 0.0045
@@ -233,8 +232,8 @@ with view1:
                 <td>{formatted_car_hire_two}</td>
                 <td style="color:red" >3000</td>
                 <td>{formatted_car_hire_two}</td>
-                <td style="color:red" >{loss_of_use}</td>
-                <td>{formatted_car_hire_nil}</td>
+                <td style="color:red" >3000</td>
+                <td>{formatted_car_hire_two}</td>
                
                 
             </tr>      
