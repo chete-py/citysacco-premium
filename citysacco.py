@@ -26,6 +26,13 @@ with view1:
     fee = 100
     ex_pr = 0
     pvt_value = 0
+
+    
+    if loss_of_use == 'Exluded':
+        car_hire += 0
+    elif loss_of_use == 'Inclusive':
+        car_hire += 3000       
+                        
     
     if value < 2500000:
         cannon_rate = 4.5
@@ -38,11 +45,12 @@ with view1:
         cannon_premium = (value * (cannon_rate/100) * (days/365))
 
     if value < 500000:
-        apa_rate = 'TPO'
+        apa_rate = 'Minimum 500K'
         formatted_apa_gross_premium = 'NA'
         formatted_apa_premium = 'NA'
         formatted_apa_levies = 'NA'
         formatted_apa_total = 'NA'
+        formatted_apa_car_hire_two = 'NA'
     else:
         if 500000 < value < 2500000:
             apa_rate = 4
@@ -54,13 +62,14 @@ with view1:
             apa_rate = 3
             apa_premium= (value * (apa_rate/100) * (days/365))  
             
-        apa_gross_premium = ( apa_premium + car_hire_two)
+        apa_gross_premium = ( apa_premium + car_hire)
         apa_levies = apa_gross_premium * 0.0045
         apa_total = ( apa_gross_premium + fee + apa_levies )
         formatted_apa_premium = format_with_commas(apa_premium)
         formatted_apa_gross_premium = format_with_commas(apa_gross_premium)
         formatted_apa_levies = format_with_commas(apa_levies)
-        formatted_apa_total = format_with_commas(apa_total)    
+        formatted_apa_total = format_with_commas(apa_total)  
+        formatted_apa_car_hire = format_with_commas(car_hire) 
     
     
     # if value > 0:
@@ -81,21 +90,13 @@ with view1:
 
     if st.button("Calculate"):
 
-        if loss_of_use == 'Exluded':
-            car_hire += 0
-            car_hire_two += 0
-        elif loss_of_use == 'Inclusive':
-            car_hire_nil += 0
-            car_hire_two += 3000       
-                        
-        cannon_gross_premium = (cannon_premium + car_hire_two)
-        icea_gross_premium = (icea_premium + car_hire_two)        
+        cannon_gross_premium = (cannon_premium + car_hire)
+        icea_gross_premium = (icea_premium + car_hire)        
         
         
         cannon_levies = cannon_gross_premium * 0.0045
         icea_levies = icea_gross_premium * 0.0045
-        
-               
+                       
 
         cannon_total = ( cannon_gross_premium + fee + cannon_levies )
         icea_total = ( icea_gross_premium + fee + icea_levies )        
@@ -116,9 +117,7 @@ with view1:
         
         
         
-        formatted_car_hire = format_with_commas(car_hire)
-        formatted_car_hire_nil = format_with_commas(car_hire_nil)
-        formatted_car_hire_two = format_with_commas(car_hire_two)
+        formatted_car_hire = format_with_commas(car_hire)  
 
         
         
@@ -250,11 +249,11 @@ with view1:
                 <td>Courtesy Car</td>                        
                 <td></td>
                 <td style="color:red" >3000</td>
-                <td>{formatted_car_hire_two}</td>
+                <td>{formatted_car_hire}</td>
                 <td style="color:red" >3000</td>
-                <td>{formatted_car_hire_two}</td>
+                <td>{formatted_apa_car_hire}</td>
                 <td style="color:red" >3000</td>
-                <td>{formatted_car_hire_two}</td>
+                <td>{formatted_car_hire}</td>
                
                 
             </tr>      
