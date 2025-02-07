@@ -14,6 +14,12 @@ with view1:
     else:
         days = 365  
 
+  def format_with_commas(number):
+        if isinstance(number, (int, float)):  # Check if value is a number
+            return "{:,.2f}".format(round(number, 2))
+        return number
+                    
+
     car_hire = 0
     car_hire_nil = 0    
     car_hire_two = 0
@@ -49,6 +55,10 @@ with view1:
         apa_gross_premium = ( apa_premium + car_hire_two)
         apa_levies = apa_gross_premium * 0.0045
         apa_total = ( apa_gross_premium + fee + apa_levies )
+        formatted_apa_premium = format_with_commas(apa_premium)
+        formatted_apa_gross_premium = format_with_commas(apa_gross_premium)
+        formatted_apa_levies = format_with_commas(apa_levies)
+        formatted_apa_total = format_with_commas(apa_total)    
     
     
     # if value > 0:
@@ -95,17 +105,13 @@ with view1:
         #     rounded_number = round(number, 2)
         #     return "{:,.2f}".format(rounded_number)
 
-        def format_with_commas(number):
-            if isinstance(number, (int, float)):  # Check if value is a number
-                return "{:,.2f}".format(round(number, 2))
-            return number
-                    
+      
         
         formatted_value = format_with_commas(value)        
 
         formatted_cannon_premium = format_with_commas(cannon_premium)        
         formatted_icea_premium = format_with_commas(icea_premium)
-        formatted_apa_premium = format_with_commas(apa_premium)
+        
         
         
         formatted_car_hire = format_with_commas(car_hire)
@@ -115,17 +121,17 @@ with view1:
         
         
         formatted_icea_gross_premium = format_with_commas(icea_gross_premium)
-        formatted_apa_gross_premium = format_with_commas(apa_gross_premium)
+       
         formatted_cannon_gross_premium = format_with_commas(cannon_gross_premium)
        
 
         formatted_icea_levies = format_with_commas(icea_levies)
-        formatted_apa_levies = format_with_commas(apa_levies)
+        
         formatted_cannon_levies = format_with_commas(cannon_levies)
 
         
         formatted_icea_total = format_with_commas(icea_total)
-        formatted_apa_total = format_with_commas(apa_total)              
+                  
         formatted_cannon_total = format_with_commas(cannon_total)
        
         # Create an HTML report
