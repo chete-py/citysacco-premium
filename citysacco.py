@@ -27,15 +27,17 @@ with view1:
     if value < 500000:
         apa_rate = 'TPO'
         apa_premium = 0
-    elif 500000 < value < 2500000:
-        apa_rate = 4
-        apa_premium = max(value * (apa_rate/100) * (days/365),(42500 * (days/365)))
-    elif 2499999 < value < 5000000:
-        apa_rate = 3.5
-        apa_premium= max(value * (apa_rate/100) * (days/365), (42500 * (days/365)))
-    elif value > 4999999:
-        apa_rate = 3
-        apa_premium= (value * (apa_rate/100) * (days/365))  
+        apa_total = 'NA'
+    else:
+        if 500000 < value < 2500000:
+            apa_rate = 4
+            apa_premium = max(value * (apa_rate/100) * (days/365),(42500 * (days/365)))
+        elif 2499999 < value < 5000000:
+            apa_rate = 3.5
+            apa_premium= max(value * (apa_rate/100) * (days/365), (42500 * (days/365)))
+        elif value > 4999999:
+            apa_rate = 3
+            apa_premium= (value * (apa_rate/100) * (days/365))  
     
     
     # if value > 0:
