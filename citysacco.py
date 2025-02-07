@@ -96,15 +96,13 @@ with view1:
         #     rounded_number = round(number, 2)
         #     return "{:,.2f}".format(rounded_number)
 
-        def format_with_commas(value):
-            if isinstance(value, (int, float)):  # Check if value is a number
-                return "{:,.2f}".format(round(value, 2))
-            return value
+        def format_with_commas(number):
+            if isinstance(number, (int, float)):  # Check if value is a number
+                return "{:,.2f}".format(round(number, 2))
+            return number
                     
         
-        formatted_value = format_with_commas(value)
-
-        
+        formatted_value = format_with_commas(value)        
 
         formatted_cannon_premium = format_with_commas(cannon_premium)        
         formatted_icea_premium = format_with_commas(icea_premium)
