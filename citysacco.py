@@ -12,7 +12,14 @@ with view1:
     if span == "Pro-Rated Cover":                
         days = st.number_input('Number of days on cover')   
     else:
-        days = 365           
+        days = 365  
+
+    car_hire = 0
+    car_hire_nil = 0    
+    car_hire_two = 0
+    fee = 100
+    ex_pr = 0
+    pvt_value = 0
     
     if value < 2500000:
         cannon_rate = 4.5
@@ -38,6 +45,10 @@ with view1:
         elif value > 4999999:
             apa_rate = 3
             apa_premium= (value * (apa_rate/100) * (days/365))  
+            
+        apa_gross_premium = ( apa_premium + car_hire_two)
+        apa_levies = apa_gross_premium * 0.0045
+        apa_total = ( apa_gross_premium + fee + apa_levies )
     
     
     # if value > 0:
@@ -55,12 +66,7 @@ with view1:
         icea_premium = (value * (icea_rate/100) * (days/365))
 
         
-    car_hire = 0
-    car_hire_nil = 0    
-    car_hire_two = 0
-    fee = 100
-    ex_pr = 0
-    pvt_value = 0
+   
 
     if st.button("Calculate"):
 
@@ -73,16 +79,16 @@ with view1:
                         
         cannon_gross_premium = (cannon_premium + car_hire_two)
         icea_gross_premium = (icea_premium + car_hire_two)        
-        apa_gross_premium = ( apa_premium + car_hire_two)
+        
         
         cannon_levies = cannon_gross_premium * 0.0045
         icea_levies = icea_gross_premium * 0.0045
-        apa_levies = apa_gross_premium * 0.0045
+        
                
 
         cannon_total = ( cannon_gross_premium + fee + cannon_levies )
         icea_total = ( icea_gross_premium + fee + icea_levies )        
-        apa_total = ( apa_gross_premium + fee + apa_levies )
+        
         
 
         # Format numbers with commas for thousands
