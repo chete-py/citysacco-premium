@@ -14,7 +14,7 @@ with view1:
     else:
         days = 365  
 
-  def format_with_commas(number):
+    def format_with_commas(number):
         if isinstance(number, (int, float)):  # Check if value is a number
             return "{:,.2f}".format(round(number, 2))
         return number
