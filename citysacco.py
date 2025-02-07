@@ -91,11 +91,16 @@ with view1:
         
         
 
-        # Format numbers with commas for thousands
-        def format_with_commas(number):
-            rounded_number = round(number, 2)
-            return "{:,.2f}".format(rounded_number)
-            
+        # # Format numbers with commas for thousands
+        # def format_with_commas(number):
+        #     rounded_number = round(number, 2)
+        #     return "{:,.2f}".format(rounded_number)
+
+        def format_with_commas(value):
+            if isinstance(value, (int, float)):  # Check if value is a number
+                return "{:,.2f}".format(round(value, 2))
+            return value
+                    
         
         formatted_value = format_with_commas(value)
 
