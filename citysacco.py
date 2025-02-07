@@ -33,7 +33,7 @@ with view1:
 
     if value < 500000:
         apa_rate = 'TPO'
-        apa_premium = 0
+        apa_gross_premium = 'NA'
         apa_total = 'NA'
     else:
         if 500000 < value < 2500000:
@@ -64,7 +64,6 @@ with view1:
     elif value > 2499999:
         icea_rate = 3.5 
         icea_premium = (value * (icea_rate/100) * (days/365))
-
         
    
 
