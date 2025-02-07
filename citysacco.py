@@ -40,6 +40,7 @@ with view1:
     if value < 500000:
         apa_rate = 'TPO'
         formatted_apa_gross_premium = 'NA'
+        formatted_apa_premium = 'NA'
         formatted_apa_levies = 'NA'
         formatted_apa_total = 'NA'
     else:
