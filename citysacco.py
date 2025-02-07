@@ -213,7 +213,7 @@ with view1:
                 <td>{value}</td> 
                 <td style="color:red">{cannon_rate}%</td>
                 <td>{formatted_cannon_premium}</td>
-                <td style="color:red">{apa_rate}%</td>
+                <td style="color:red">{apa_rate}</td>
                 <td>{formatted_apa_premium}</td> 
                 <td style="color:red">{icea_rate}%</td>
                 <td>{formatted_icea_premium}</td> 
