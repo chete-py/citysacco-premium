@@ -221,7 +221,7 @@ with view1:
             </tr>                     
 
             <tr>
-                <td>Excess Protector - (Material Damage)</td>
+                <td>Excess Protector - (Own Damage)</td>
                 <td></td>
                 <td style="color:red">Inclusive</td>
                 <td >0.00</td>                       
