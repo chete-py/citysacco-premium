@@ -49,7 +49,7 @@ with view1:
         formatted_apa_gross_premium = 'NA'
         formatted_apa_premium = 'NA'
         formatted_apa_levies = 'NA'
-        formatted_apa_total = 'NA'
+        formatted_apa_total = 'Consider TPO'
         formatted_apa_car_hire = 'NA'
     else:
         if 500000 < value < 2500000:
