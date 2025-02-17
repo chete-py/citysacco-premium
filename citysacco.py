@@ -77,7 +77,7 @@ with view1:
     #     apa_premium = max(value * (apa_rate/100) * (days/365), (25000 * (days/365)))
    
     if value < 1000000:
-        icea_rate = 5.35      
+        icea_rate = 5.25      
         icea_premium = max(value * (icea_rate/100) * (days/365),(30000 * (days/365)))                      
     elif 999999 < value < 2500000:
         icea_rate = 4.25 
