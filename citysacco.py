@@ -192,7 +192,7 @@ with view1:
             <tr>
                 <th colspan="2">MOTOR PRIVATE COMPREHENSIVE</th>
                 <th colspan="2"><img src="https://th.bing.com/th/id/OIP.FKycthqs_eBeEyXkHC5blAHaHa?rs=1&pid=ImgDetMain" alt="Cannon Logo"></th>                       
-                <th colspan="2"><img src="https://sokodirectory.com/wp-content/uploads/2015/04/APA-Insurance1.jpg" alt="APA Logo"></th>
+                <th colspan="2"><img src="https://i.ytimg.com/vi/7BORiuBsmyo/maxresdefault.jpg" alt="APA Logo"></th>
                 <th colspan="2"><img src="https://th.bing.com/th/id/OIP.uxjOhVxnL1cs8CrOBZqzjwAAAA?pid=ImgDet&w=195&h=129&c=7&dpr=1.5" alt="icea Logo"></th>
                 
                 </tr>
