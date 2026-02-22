@@ -34,15 +34,18 @@ with view1:
         car_hire += 3000       
                         
     
-    if value < 2500000:
+    if value < 1000000:
         cannon_rate = 4.5
         cannon_premium = max(value * (cannon_rate/100) * (days/365),(35000 * (days/365)))
-    elif 2499999 < value < 5000000:
-        cannon_rate = 4
+    elif 999999 < value < 2500000:
+        cannon_rate = 3.75
         cannon_premium = max(value * (cannon_rate/100) * (days/365),(35000 * (days/365)))
+    elif 2499999 < value < 5000000:
+        cannon_rate = 3.5
+        cannon_premium = (value * (cannon_rate/100) * (days/365))
     elif value > 4999999:
         cannon_rate = 3
-        cannon_premium = (value * (cannon_rate/100) * (days/365))
+        cannon_premium= (value * (cannon_rate/100) * (days/365))  
 
     if value < 500000:
         apa_rate = 'Minimum 500K'
@@ -83,7 +86,7 @@ with view1:
         icea_rate = 4.25 
         icea_premium = (value * (icea_rate/100) * (days/365))
     elif value > 2499999:
-        icea_rate = 3.5 
+        icea_rate = 3.25 
         icea_premium = (value * (icea_rate/100) * (days/365))
         
    
@@ -323,3 +326,4 @@ with view1:
             file_name=f"{reg}_quote.html",
             mime="text/html"
         )
+
