@@ -310,9 +310,7 @@ with view1:
                 <td></td>
                 <td class = 'bold' style="color:#152637">{formatted_icea_total}</td>                                                                
             </tr>                   
-            <tr>
-                <th colspan="8" style="color: white; background-color: #002395; text-align: center; font-size: 12px;">Additional 10% to be charged on windscreen value above 50,000 (free limit) <br> For assistance call: Chete - 0791530369</th>
-            </tr>
+           
         </table>
         </body>                    
         </html>"""
